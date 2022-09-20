@@ -1,17 +1,19 @@
+import { Fragment } from 'react';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
-      React homework template
-    </div>
+    <Fragment>
+      <div className="navigationContainer">
+        <a href="/">Home</a>
+        <a href="/">Movies</a>
+      </div>
+      <div className="homePageContainer">
+        <span>Trending today</span>
+        <ul className="trendingList">
+          <li className="trendingListItem"></li>
+        </ul>
+      </div>
+    </Fragment>
   );
 };
 // '/' - компонент <HomePage>, домашняя страница со списком популярных кинофильмов.
