@@ -1,21 +1,24 @@
-import { Fragment } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import React, { Fragment } from 'react';
+import HomeView from 'views/HomeView';
+import MoviesView from 'views/MoviesView';
+import Navigation from './navigation/Navigation';
+import NotFoundView from 'views/NotFoundView';
 
 export const App = () => {
   return (
     <Fragment>
-      <div className="navigationContainer">
-        <a href="/">Home</a>
-        <a href="/">Movies</a>
-      </div>
-      <div className="homePageContainer">
-        <span>Trending today</span>
-        <ul className="trendingList">
-          <li className="trendingListItem"></li>
-        </ul>
-      </div>
+      <Navigation />
+
+      <Routes>
+        <Route path="/" element={<HomeView />}></Route>
+        <Route path="/movies" element={<MoviesView />}></Route>
+        <Route path="*" element={<NotFoundView />}></Route>
+      </Routes>
     </Fragment>
   );
 };
+
 // '/' - компонент <HomePage>, домашняя страница со списком популярных кинофильмов.
 // '/movies' - компонент <MoviesPage>, страница поиска фильмов по ключевому слову.
 // '/movies/:movieId' - компонент <MovieDetailsPage>, страница с детальной информацией о кинофильме.
