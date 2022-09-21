@@ -13,6 +13,18 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<HomeView />}></Route>
         <Route path="/movies" element={<MoviesView />}></Route>
+        <Route
+          path="/movies/:movieId"
+          element={<div>movies/:movieId</div>}
+        ></Route>
+        <Route
+          path="/movies/:movieId/cast"
+          element={<div>movies/:movieId</div>}
+        ></Route>
+        <Route
+          path="/movies/:movieId/reviews"
+          element={<div>movies/:movieId</div>}
+        ></Route>
         <Route path="*" element={<NotFoundView />}></Route>
       </Routes>
     </Fragment>

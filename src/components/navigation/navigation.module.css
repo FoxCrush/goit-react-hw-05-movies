@@ -1,5 +1,5 @@
 .navigationContainer {
-  display: block;
+  display: flex;
   box-shadow: 2px 1px 2px 1px rgba(0, 0, 255, 0.2);
   background-color: rgba(29, 29, 201, 0.735);
   height: 7vh;
@@ -8,6 +8,7 @@
   display: flex;
   align-items: center;
   height: 100%;
+  width: 50%;
   margin-left: 5vw;
 }
 .navListItem {
@@ -25,4 +26,7 @@
 .navListLinkActive {
   composes: navListLink;
   color: azure;
+}
+.logo {
+  width: 20vw;
 }
