@@ -13,9 +13,16 @@
 .navListItem {
   margin-right: 2vw;
 }
-.navListItemTitle {
-  display: flex;
+
+.navListItemTitleActive {
+  color: azure;
+}
+.navListLink {
   color: black;
   font-style: normal;
   font-size: 2vh;
+}
+.navListLinkActive {
+  composes: navListLink;
+  color: azure;
 }
