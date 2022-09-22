@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 import TrandingContainer from 'components/trandongContainer';
-import withRouter from 'utility/withRouter';
 
 class HomeView extends Component {
   state = { movies: [] };
